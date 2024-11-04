@@ -11,7 +11,7 @@ Para configurar o projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório:**
    ```bash
-   git clone <URL do seu repositório>
+   git clone <[Clique aqui para Clonar](https://github.com/HenriSousa/gerenciador-transacoes.git)>
    cd <../desafiotecnico/backend/laravel>
    ```
 

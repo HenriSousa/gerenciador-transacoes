@@ -1,0 +1,56 @@
+/* Estilo geral para o formulário de transações */
+.transacao-form {
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 20px auto; /* Centraliza o formulário na página */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border: 1px solid #007BFF; /* Borda azul ao redor do formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Fundo claro */
+}
+
+/* Estilo dos cabeçalhos */
+h2 {
+    color: #007BFF; /* Cabeçalho em azul */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+/* Estilo dos labels */
+label {
+    display: block; /* Faz com que os labels ocupem toda a largura */
+    margin-bottom: 10px; /* Espaçamento abaixo de cada label */
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%; /* Campos ocupam toda a largura disponível */
+    padding: 10px; /* Espaçamento interno nos campos */
+    margin-top: 5px; /* Espaçamento acima de cada campo */
+    border: 1px solid #007BFF; /* Borda azul nos campos */
+    border-radius: 4px; /* Bordas arredondadas nos campos */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilo para o botão de envio */
+button {
+    background-color: #007BFF; /* Fundo azul para o botão */
+    color: white; /* Texto branco para contraste */
+    border: none; /* Remove borda padrão */
+    padding: 10px 15px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 4px; /* Bordas arredondadas no botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+    display: block; /* Faz com que o botão ocupe toda a largura disponível */
+    margin: 20px auto; /* Centraliza o botão na página */
+}
+
+button:hover {
+    background-color: #0056b3; /* Fundo azul mais escuro ao passar o mouse */
+}
+
+/* Estilo para mensagens de erro (se necessário) */
+.error {
+    color: red; /* Cor vermelha para mensagens de erro */
+    font-size: 0.9em; /* Tamanho da fonte menor para mensagens de erro */
+}

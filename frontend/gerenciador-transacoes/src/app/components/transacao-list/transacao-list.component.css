@@ -1,0 +1,63 @@
+/* Estilo geral para a lista de transações */
+.transacao-list {
+    max-width: 800px; /* Largura máxima da lista */
+    margin: 20px auto; /* Centraliza a lista na página */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border: 1px solid #007BFF; /* Borda azul ao redor da lista */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Fundo claro */
+}
+
+/* Estilo dos cabeçalhos */
+h2 {
+    color: #007BFF; /* Cabeçalho em azul */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%; /* Tabela ocupa toda a largura disponível */
+    border-collapse: collapse; /* Remove espaçamento entre células */
+    margin-top: 20px; /* Espaçamento acima da tabela */
+}
+
+/* Estilo para as células do cabeçalho */
+th {
+    background-color: #007BFF; /* Cabeçalho da tabela azul */
+    color: white; /* Texto branco no cabeçalho */
+    padding: 10px; /* Espaçamento interno nas células do cabeçalho */
+}
+
+/* Estilo para as células do corpo da tabela */
+td {
+    padding: 10px; /* Espaçamento interno nas células do corpo */
+    border: 1px solid #ddd; /* Borda cinza nas células do corpo */
+}
+
+/* Estilo para os botões de ação */
+button {
+    background-color: #007BFF; /* Fundo azul para os botões */
+    color: white; /* Texto branco para contraste */
+    border: none; /* Remove borda padrão */
+    padding: 5px 10px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 4px; /* Bordas arredondadas no botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    margin-right: 5px; /* Margem à direita para espaçar os botões */
+}
+
+/* Estilo para o botão "Adicionar Transação" */
+.add-button {
+    float: right; /* Coloca o botão à direita */
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+}
+
+/* Estilo para o botão "Editar e Deletar" */
+.edit-delete-button{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilo para o botão ao passar o mouse */
+button:hover {
+    background-color: #0056b3; /* Fundo azul mais escuro ao passar o mouse */
+}

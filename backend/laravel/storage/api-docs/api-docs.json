@@ -1,0 +1,220 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/transacoes": {
+            "get": {
+                "tags": [
+                    "Transações"
+                ],
+                "summary": "Listar todas as transações",
+                "operationId": "e85f8bbfcd75ea1127e0d71618b8523d",
+                "parameters": [
+                    {
+                        "name": "tipo",
+                        "in": "query",
+                        "description": "Tipo de transação (receita ou despesa)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Uma lista de transações",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Transacao"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Transações"
+                ],
+                "summary": "Criar uma nova transação",
+                "operationId": "b35ca9eadb771aeb6253eb9a54950057",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Transacao"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Transação criada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Transacao"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/transacoes/{id}": {
+            "get": {
+                "tags": [
+                    "Transações"
+                ],
+                "summary": "Exibir uma transação específica",
+                "operationId": "45304cc95374156455f7f54777a21d04",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Detalhes da transação de acordo com o ID",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Transacao"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Transação não encontrada"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Transações"
+                ],
+                "summary": "Atualizar uma transação existente",
+                "operationId": "2f555c38f19899a34a443534a2f0829f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Transacao"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Transação atualizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Transacao"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Transação não encontrada"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Transações"
+                ],
+                "summary": "Excluir uma transação",
+                "operationId": "92aae4ef743c5ebd1c928f6b4890b747",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Transação excluída com sucesso"
+                    },
+                    "404": {
+                        "description": "Transação não encontrada"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Transacao": {
+                "required": [
+                    "descricao",
+                    "valor",
+                    "tipo",
+                    "categoria"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "ID da transação",
+                        "type": "integer"
+                    },
+                    "descricao": {
+                        "description": "Descrição da transação",
+                        "type": "string"
+                    },
+                    "valor": {
+                        "description": "Valor da transação",
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "tipo": {
+                        "description": "Tipo da transação",
+                        "type": "string",
+                        "enum": [
+                            "receita",
+                            "despesa"
+                        ]
+                    },
+                    "categoria": {
+                        "description": "Categoria da transação",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Transações",
+            "description": "Transações"
+        }
+    ]
+}

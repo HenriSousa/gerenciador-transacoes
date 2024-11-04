@@ -1,0 +1,27 @@
+<!-- src/app/components/transacao-form/transacao-form.component.html -->
+<div class="transacao-form">
+    <h2>{{ isEdit ? 'Editar' : 'Adicionar' }} Transação</h2>
+    <form (ngSubmit)="salvarTransacao()">
+      <label>
+        Descrição:
+        <input type="text" [(ngModel)]="transacao.descricao" name="descricao" required />
+      </label>
+      <label>
+        Valor:
+        <input type="number" [(ngModel)]="transacao.valor" name="valor" required />
+      </label>
+      <label>
+        Tipo:
+        <select [(ngModel)]="transacao.tipo" name="tipo" required>
+          <option value="receita">Receita</option>
+          <option value="despesa">Despesa</option>
+        </select>
+      </label>
+      <label>
+        Categoria:
+        <input type="text" [(ngModel)]="transacao.categoria" name="categoria" required />
+      </label>
+      <button type="submit">{{ isEdit ? 'Atualizar' : 'Salvar' }}</button>
+    </form>
+  </div>
+  

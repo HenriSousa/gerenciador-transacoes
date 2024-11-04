@@ -1,0 +1,36 @@
+<!-- src/app/components/transacao-list/transacao-list.component.html -->
+<div class="transacao-list">
+    <h2>Lista de Transações</h2>
+    <label>
+      Filtrar por Tipo:
+      <select [(ngModel)]="tipoSelecionado" (change)="carregarTransacoes(tipoSelecionado)">
+          <option value="">Todos</option>
+          <option value="receita">Receita</option>
+          <option value="despesa">Despesa</option>
+      </select>
+    </label>
+    <button class="add-button" routerLink="/transacoes/novo">Adicionar Transação</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+          <th>Categoria</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transacao of transacoes">
+           <td>{{ transacao.descricao }}</td>
+           <td>{{ transacao.valor | currency }}</td>
+           <td>{{ transacao.tipo }}</td>
+           <td>{{ transacao.categoria }}</td>
+           <td class="edit-delete-button">
+              <button *ngIf="transacao.id !== undefined" (click)="editarTransacao(transacao.id)">Editar</button>
+              <button *ngIf="transacao.id !== undefined" (click)="deletarTransacao(transacao.id)">Deletar</button>
+           </td>
+        </tr>
+     </tbody>
+    </table>
+  </div>

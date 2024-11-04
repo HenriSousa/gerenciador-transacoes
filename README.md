@@ -10,30 +10,32 @@ Para configurar o projeto localmente, siga os passos abaixo:
 ### Backend (Laravel)
 
 1. **Clone o repositório:**
-   ```bash
-   git clone <[Clique aqui para Clonar](https://github.com/HenriSousa/gerenciador-transacoes.git)>
-   cd <../desafiotecnico/backend/laravel>
+   git clone [Clique aqui para Clonar](https://github.com/HenriSousa/gerenciador-transacoes.git)
+
+2. **Navegue até o diretório do backend:**
+   ```
+   cd ../gerenciador-transacoes/backend/laravel
    ```
 
-2. **Instale as dependências do Composer:**
+3. **Instale as dependências do Composer:**
    ```bash
    composer install
    ```
 
-3. **Crie um arquivo `.env`:**
+4. **Crie um arquivo `.env`:**
    ```bash
    cp .env.example .env
    ```
 
-4. **Configure as variáveis de ambiente no arquivo `.env`** com suas credenciais do banco de dados.
+5. **Configure as variáveis de ambiente no arquivo `.env`** com suas credenciais do banco de dados.
 
 
-5. **Execute as migrações do banco de dados:**
+6. **Execute as migrações do banco de dados:**
    ```bash
    php artisan migrate
    ```
 
-6. **Inicie o servidor:**
+7. **Inicie o servidor:**
    ```bash
    php artisan serve
    ```
@@ -42,7 +44,7 @@ Para configurar o projeto localmente, siga os passos abaixo:
 
 1. **Navegue até o diretório do frontend:**
    ```bash
-   cd <../desafiotecnico/frontend/gerenciador-transacoes>
+   cd ../gerenciador-transacoes/frontend/gerenciador-transacoes
    ```
 
 2. **Instale as dependências do Angular:**

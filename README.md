@@ -102,6 +102,14 @@ curl -X POST http://localhost:8000/api/transacoes \
 - **Banco de Dados:**
   - MySQL Workbench
 
+## Documentação da API
+
+Você pode acessar a documentação da API gerada pelo Swagger através do seguinte link:
+
+[Documentação da API](http://localhost:8000/api/documentation)
+
+Esta documentação contém informações sobre todos os endpoints disponíveis, incluindo métodos, parâmetros e exemplos de uso.
+
 ## Contribuição
 
 Sinta-se à vontade para contribuir! Se você tiver sugestões ou melhorias, faça um fork do repositório e envie um pull request.
